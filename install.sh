@@ -8,8 +8,8 @@ sudo mv micro /bin/
 cp .tmux.conf ~/.tmux.conf
 
 mkdir -p ~/.config/micro
-cp micro/bindings.json ~/.config/micro/bindings.json
-cp micro/settings.json ~/.config/micro/settings.json
+cp micro/bindings.json ~/.config/micro
+cp micro/settings.json ~/.config/micro
 
 if ! grep -q "# >>> auto-micro-tmux config start" ~/.bashrc; then
     cat << 'EOF' >> ~/.bashrc
