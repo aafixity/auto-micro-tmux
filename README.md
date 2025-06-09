@@ -1,23 +1,30 @@
-## 🛠️ Installation
+🛠️ Installation
 
-1. Clone the repository:
+Download the repository archive:
 
+    wget https://github.com/aafixity/auto-micro-tmux/archive/refs/heads/main.zip
+
+Unzip the archive:
+
+    unzip main.zip
+
+Change into the directory:
+
+    cd auto-micro-tmux-main
+
+Make the install script executable:
+
+    chmod +x install.sh
+
+Run the install script:
+
+    ./install.sh
+
+Apply the new shell configuration:
+
+    source ~/.bashrc
+  
+One line command:
 ```bash
-git clone https://github.com/aafixity/auto-micro-tmux.git
-```
-2. Change into the directory:
-```bash
-cd auto-micro-tmux
-```
-3. Make the install script executable:
-```bash
-chmod +x install.sh
-```
-4. Run the install script:
-```bash
-./install.sh
-```
-5. Apply the new shell configuration:
-```bash
-source ~/.bashrc
+wget https://github.com/aafixity/auto-micro-tmux/archive/refs/heads/main.zip && unzip main.zip && cd auto-micro-tmux-main && chmod +x install.sh && ./install.sh && source ~/.bashrc
 ```
