@@ -3,7 +3,7 @@
 sudo dnf install -y tmux
 
 curl https://getmic.ro | bash
-sudo mv micro /bin/
+sudo mv micro /usr/bin/
 
 cp .tmux.conf ~/.tmux.conf
 
