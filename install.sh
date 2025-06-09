@@ -26,5 +26,14 @@ alias ip="ip --color"
 EOF
 fi
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PARENT_DIR="$(basename "$SCRIPT_DIR")"
+
+if [[ "$PARENT_DIR" == "auto-micro-tmux-main" ]]; then
+  echo "Cleaning up..."
+  cd ..
+  rm -rf auto-micro-tmux-main main.zip
+fi
+
 echo "Install complete."
 echo "Waiting for: source ~/.bashrc."
