@@ -11,11 +11,15 @@ mkdir -p ~/.config/micro
 cp microconfs/bindings.json ~/.config/micro
 cp microconfs/settings.json ~/.config/micro
 
+mkdir -p ~/.config/micro/colorschemes
+cp microthemes/* ~/.config/micro/colorschemes
+
 if ! grep -q "# >>> auto-micro-tmux config start" ~/.bashrc; then
     cat << 'EOF' >> ~/.bashrc
 
 # >>> auto-micro-tmux config start
 export TERM=alacritty
+export MICRO_TRUECOLOR=1
 
 alias ls="ls --color"
 alias ll="ls -l"
