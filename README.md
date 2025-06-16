@@ -1,38 +1,47 @@
-🛠️ Installation
-
-Download the repository archive:
-
-    wget https://github.com/aafixity/auto-micro-tmux/archive/refs/heads/main.zip
-
-Unzip the archive:
-
-    unzip main.zip
-
-Change into the directory:
-
-    cd auto-micro-tmux-main
-
-Make the install script executable:
-
-    chmod +x install.sh
-
-Run the install script:
-
-    ./install.sh
-
-Apply the new shell configuration:
-
-    source ~/.bashrc
-  
-One line command:
+# Installation command
 ```bash
 wget https://github.com/aafixity/auto-micro-tmux/archive/refs/heads/main.zip && unzip main.zip && cd auto-micro-tmux-main && chmod +x install.sh && ./install.sh && source ~/.bashrc
 ```
 
-Additional to .bashrc (pretty ps1 and auto open tmux):
+# Installation step by step
+
+#### 1. Download the repository archive:
+```bash
+wget https://github.com/aafixity/auto-micro-tmux/archive/refs/heads/main.zip
+```
+#### 2. Unzip the archive:
+```bash
+unzip main.zip
+```
+#### 3. Change into the directory:
+```bash
+cd auto-micro-tmux-main
+```
+#### 4. Make the install script executable:
+```bash
+chmod +x install.sh
+```
+#### 5. Run the install script:
+```bash
+./install.sh
+```
+#### 6. Apply the new shell configuration:
+```bash
+source ~/.bashrc
+```
+# Additional features
+#### Micro theme installation:
+1. Open editor `micro`.
+2. Press <kbd>Ctrl</kbd>+<kbd>e</kbd>.
+3. Type `set colorscheme catppuccin-macchiato` (u can change <macchiato> to one of this themes: latte, frappe, macchiato, or mocha).
+4. Press <kbd>Enter</kbd>.
+
+
+#### Pretty PS1:
 ```bash
 PS1='[\[\e[1;32m\]\u\[\e[0m\]@\[\e[1;34m\]\h\[\e[0m\]:\[\e[1;33m\]\w\[\e[0m\]]$: '
 ```
+#### Advanced PS1:
 ```bash
 set_bash_prompt() {
 
@@ -54,6 +63,7 @@ set_bash_prompt() {
 PROMPT_COMMAND=set_bash_prompt
 ```
 
+#### Tmux auto launch:
 ```bash
 if command -v tmux>/dev/null; then
   if [ -z "$TMUX" ]; then
